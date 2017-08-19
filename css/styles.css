@@ -1,0 +1,95 @@
+.img-wrap {
+    background: #f8f8f8;
+    height: 200px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    width: 200px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.img-thumbnails {
+    margin: 0 auto 10px;
+    width: 200px;
+}
+
+ul {
+    padding: 0;
+}
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+li.small-image {
+    width: 50px;
+}
+
+.thumbnail {
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.title {
+    color: #D26C22;
+}
+
+a.title:hover {
+    color: #D26C22;
+    background: none;
+}
+
+.ng-pristine.ng-invalid {
+    border-color: red;
+}
+
+.ng-dirty.ng-invalid {
+    border-color: red;
+}
+
+.ng-dirty.ng-valid {
+    border-color: green;
+}
+span.label#second{
+    margin-left: 5px;
+}
+em#emFirst{
+    margin-left: 35px;
+}
+
+div.small_val, div.small_val_grey {
+    display: block;
+    clear: left;
+    font-size: x-small;
+}
+.weather-forecast-icons {
+    color: #333;
+    padding-left: 13px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}

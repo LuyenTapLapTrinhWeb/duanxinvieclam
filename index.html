@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="gemStore">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular Tutorial</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/résume.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components\font-awesome\css\font-awesome.css">
+
+</head>
+
+
+<body ng-controller="StoreController as store">
+    <div class="container">
+        <div class="row">
+            <menu-tab></menu-tab>
+        </div>
+    </div>
+    <!-- {{1+1}} -->
+    <div class="container" ng-view></div>
+    <!-- <ng-view ng-class="container:"></ng-view>  -->
+    <!-- <div class="ng-view"></div>  -->
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/app/modules/gem-store.js"></script>
+    <script src="js/app/controllers/store-controller.js"></script>
+
+    <script src="js/app/controllers/resume-controller.js"></script>
+
+    <script src="js/app/controllers/products.js"></script>
+    <script src="js/app/services/services.js"></script>
+    <script src="js/app/controllers/photos.js"></script>
+    <script src="js/app/controllers/weather.js"></script>
+    <script src="js/app/controllers/todo.js"></script>
+
+    <!-- <script src="https://code.highcharts.com/stock/highstock.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/stock/modules/exporting.js"></script> -->
+    <!-- <script src="js/app/services/highcharts.js"></script> -->
+</body>
+
+</html>
