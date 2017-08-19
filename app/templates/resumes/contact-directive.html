@@ -1,0 +1,37 @@
+<h3 class="rstitle">Contacts</h3>
+<div class="row">
+    <img class="img img-responsive img-circle" ng-src="{{resume.infomation.images.contact}}" alt="">
+    <div id="imgcontact" class="col-xs-12">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-xs-3">
+                    <label class="control-label" for="phone">My phone</label>
+                </div>
+                <div class="col-xs-9">
+                    <p><span><i class="fa fa-mobile-phone" aria-hidden="true"></i></span> {{resume.infomation.tel}}
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-3">
+                    <label class="control-label" for="email">My email</label>
+                </div>
+                <div class="col-xs-9">
+                    <p class="text-lowercase">
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span> {{resume.infomation.email}}
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-3">
+                    <label class="control-label" for="phone">My address</label>
+                </div>
+                <div class="col-xs-9">
+                    <p><span><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                {{resume.infomation.address}}, {{resume.infomation.city}} City, {{resume.infomation.country}}</p>
+                </div>  
+                    
+            </div>
+        </form>    
+    </div>  
+</div>

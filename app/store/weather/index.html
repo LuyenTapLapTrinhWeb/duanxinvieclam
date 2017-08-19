@@ -1,0 +1,32 @@
+<div class="jumbotron">
+    <img class="img img-responsive" src="images/weather/wefo_banner.png" alt="">
+</div>
+<div class="row">
+    <h2 class="col-xs-12 pull-left">Weather forecast</h2>
+</div>
+<div class="row">
+    <hr>
+    <!-- weather directive -->
+    <div class="col-xs-12 col-md-4">
+        <section>
+            <weather-directive></weather-directive>
+        </section>
+    </div>
+    <!-- forcast directive -->
+    <div class="col-xs-12 col-md-8">
+        <h2 class="title">Current weather and forecasts in your city</h2>
+        <section>
+            <!-- tabs directive -->
+            <tab-directive></tab-directive>
+            <hr>
+
+            <!-- tab main forecast directive -->
+            <div ng-show="tabCtrl.isSet(1)">
+                <!-- highcharts -->
+                <!-- <div id="container" style="width:100%; height:400px;"></div> -->
+                <forecast-directive></forecast-directive>
+            </div>
+
+        </section>
+    </div>
+</div>
