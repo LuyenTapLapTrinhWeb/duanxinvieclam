@@ -1,0 +1,34 @@
+<div id="bodybg" class="row">
+    <div ng-repeat="resume in resumeCtrl.resumes">
+        <!-- {{resume.infomation}} -->
+        <div id="banner" class="jumbotron text-uppercase text-center">
+            <h1><strong><span><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+            </span>{{resume.infomation.fullname}}</strong></h1>
+            <p><span><i class="fa fa-tasks" aria-hidden="true"></i>
+            </span> {{resume.infomation.job}}</p>
+            <resume-tab></resume-tab>
+        </div>
+        <div class="col-xs-12">
+            <!-- aboutme -->
+            <div id="aboutme" class="rsbox" ng-show="tabCtrl.isSet(1)">
+                <aboutme-directive></aboutme-directive>
+            </div>
+            <!-- skill-directive -->
+            <div id="skills" class="rsbox" ng-show="tabCtrl.isSet(2)">
+                <skill-directive></skill-directive>
+            </div>
+            <!-- experience-directive -->
+            <div id="experience" class="rsbox" ng-show="tabCtrl.isSet(3)">
+                <experience-directive></experience-directive>
+            </div>
+            <!-- education-directive -->
+            <div id="education" class="rsbox" ng-show="tabCtrl.isSet(4)">
+                <education-directive></education-directive>
+            </div>
+            <!-- contact-directive -->
+            <div id="contact" class="rsbox" ng-show="tabCtrl.isSet(5)">
+                <contact-directive></contact-directive>
+            </div>
+        </div>
+    </div>
+</div>

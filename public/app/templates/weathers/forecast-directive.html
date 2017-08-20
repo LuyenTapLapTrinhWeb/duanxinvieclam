@@ -1,0 +1,41 @@
+<!-- {{forecastCtrl}} -->
+<div ng-repeat="forecast in forecastCtrl.forecasts">
+    <!-- {{forecast}} -->
+    <h2>Weather and forecasts in {{forecast.city.name}} , {{forecast.city.country}}</h2>
+
+
+    <h3>13 day weather forecast</h3>
+
+    <div class="table-responsive">
+        <div class="weather-forecast-icons">
+            <ul class="list-inline" ng-repeat="list in forecast.list| limitTo: 13">
+                <li ng-repeat="weather in list.weather">
+                    <img class="img img-circle img-responsive" ng-src="http://openweathermap.org/img/w/{{weather.icon}}.png">
+                    <div class="small_val" title="Temp">{{list.main.temp}}°C </div>
+                    <div class="small_val" title="Wind">{{list.wind.speed}} m/s , </div>
+                    <div class="small_val_grey" title="Pressure">{{list.main.pressure}} </div>
+                </li>
+            </ul>
+        </div>
+        <table class="table table-bordered table-hover">
+            <tr class="row" ng-repeat="list in forecast.list| limitTo:13">
+                <td class="col-xs-4">
+                    <div ng-repeat="weather in list.weather">
+                        <ul class="list-inline">
+                            <li>{{list.dt_txt}}</li>
+                            <!-- <li> <img ng-src="https://openweathermap.org/img/w/{{weather.icon}}.png" alt="forecast in TPHCM"></li> -->
+                        </ul>
+                    </div>
+                </td>
+                <td class="col-xs-8" ng-repeat="weather in list.weather">
+
+                    <span id="first" class="label label-warning">{{list.main.temp}}°C </span>
+                    <span id="second" class="label label-default">{{list.main.temp_min}}°C</span>
+                    <em id="emFirst">{{weather.description}}</em> <br> {{list.wind.speed}} m/s <br> clouds:{{list.clouds.all}}
+                    %, {{list.main.pressure}} hpa
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
