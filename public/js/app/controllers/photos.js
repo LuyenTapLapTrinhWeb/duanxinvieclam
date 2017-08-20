@@ -1,4 +1,4 @@
-var app = angular.module("photo-directives", []);
+var app = angular.module("photo-directives",[]);
 
 
 // angular.module("gemStore").controller("PhotosController", function ($http) {

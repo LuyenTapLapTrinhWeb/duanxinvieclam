@@ -1,27 +1,10 @@
-<div class="list-group">
-    <div class="list-group-item" ng-repeat="photo in photos.photos | limitTo: 100">
-        <!-- photo gallery -->
-        <div class="panel panel-default">
-            <!-- Default panel contents -->
-            <!-- Table -->
-            <table class="table" ng-show="photo.id">
-                <thead>
-                    <tr>
-                        <th>{{photo.id}} </th>
-                        <th class="panel-heading">{{photo.title}} </th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="img-thumbnails clearfix">
-                            <img class="small-image pull-left thumbnail" ng-src="{{photo.thumbnailUrl}}"></td>
-                        <td class="img-wrap">
-                            <img class="img img-responsive img-rounded" ng-src="{{photo.url}}"></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+ 
+<!-- Page Content -->
+<section id="photos" ng-repeat="photo in photos.photos | limitTo: 100">
+    <ul class="col-xs-12 list-unstyled">
+        <li  ng-show="photo.id">
+            <a href><img class="img-fluid img-responsive img-thumbnail" ng-src="{{photo.thumbnailUrl}}"alt="{{photo.id}}.{{photo.title}}"></a>
+        </li>
+    </ul>
+</section>
+<!-- /.container -->
