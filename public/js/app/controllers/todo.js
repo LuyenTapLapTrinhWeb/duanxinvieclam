@@ -1,4 +1,4 @@
-angular.module('todoApp', [])
+angular.module('todoApp', ['ui.bootstrap'])
   .controller('TodoListController', function () {
     var todoList = this;
     todoList.todos = [
@@ -26,4 +26,19 @@ angular.module('todoApp', [])
       });
     };
 
-  });
+  })
+  .directive("slideDirective", function () {
+    return {
+      restrict: "E",
+      templateUrl: "../../app/templates/todos/slide-directive.html",
+      controller: function ($scope, $http) {
+        $scope.myInterval = 5000;
+        
+       $scope.slides = [];
+        $http({ method: "GET", url: "../json/todo.json" }).then(function (success) {
+          $scope.slides = success.data;
+        });
+      },
+      controllerAs: "slideCtrl"
+    };
+  })

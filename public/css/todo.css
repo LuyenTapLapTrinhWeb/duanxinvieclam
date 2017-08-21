@@ -2,3 +2,19 @@
   text-decoration: line-through;
   color: grey;
 }
+
+#slides_control > div {
+  height: 700px;
+}
+
+#slides_control img#banner {
+  margin: auto;
+  width: 1200px;
+}
+
+#slides_control {
+  /* position: relative; */
+  /* width: 800px; */
+  /* height: 300px; */
+    top: 20px;
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "image": "../images/todo/AngularJS_Banner.jpg",
+        "caption": "Hello, Angular!"
+    },
+    {
+        "id": 2,
+        "image": "../images/todo/bootstrap_banner.png",
+        "caption": "Hello, BootStrap!"
+    },
+    {
+        "id": 3,
+        "image": "../images/todo/Express-JS-Banner.png",
+        "caption": "Hello, Express!"
+    },
+    {
+        "id": 4,
+        "image": "../images/todo/nodejs_banner.png",
+        "caption": "Hello, NPM!"
+    }
+]

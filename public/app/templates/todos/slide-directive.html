@@ -1,0 +1,15 @@
+<div id="slides_control">
+  <div>
+    <carousel interval="myInterval">
+      <slide ng-repeat="sli in slides"  active="sli.active">
+        <!-- {{slide}} -->
+      
+          <img id="banner" ng-src="{{sli.image}}" class="img-responsive">
+          <div class="carousel-caption">
+            <h1>{{sli.caption}} </h1>
+          </div>
+        
+      </slide>
+    </carousel>
+  </div>
+</div>

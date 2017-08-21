@@ -1,3 +1,7 @@
 #photos {
     display: inline-block;
 }
+.automargin{
+    margin: auto;
+    /* width: 100px; */
+}
