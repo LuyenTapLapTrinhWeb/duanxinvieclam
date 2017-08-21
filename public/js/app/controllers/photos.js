@@ -1,4 +1,4 @@
-var app = angular.module("photo-directives",[]);
+var app = angular.module("photo-directives", []);
 
 
 // angular.module("gemStore").controller("PhotosController", function ($http) {
@@ -22,7 +22,11 @@ app.directive('photoGallery', function () {
                 method: "GET",
                 url: "https://jsonplaceholder.typicode.com/photos"
             }).then(function (success) { photos.photos = success.data; }, function (error) { });
-        }, 
+        },
         controllerAs: "photos"
     };
 });
+
+$('.carousel').carousel({
+    interval: 2000
+})
