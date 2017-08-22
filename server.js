@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-
+var port = process.env.PORT || 3000;
 //middleware
 app.use(express.static(path.join(__dirname, 'public')));
 app.set("view engine", "pug");
@@ -17,4 +17,4 @@ app.get('/render', (req, res) => {
 //     var albumId = req.params.albumId, id = req.params.id;
 //     console.log(albumId, id);
 // });
-app.listen(3000, () => { console.log("Hello", 3000) });
+app.listen(port, () => { console.log("Hello", 3000) });
