@@ -5,7 +5,7 @@
         "dob": "06/04/1991",
         "address": "number 21, 5 street, Phuoc Binh ward, dictrict 9",
         "city": "Ho Chi Minh",
-        "country": "VN",
+        "country": "Viet nam",
         "tel": "(+84) 0163 298 8576",
         "email": "thanhsk1991@gmail.com",
         "fb": "https://www.facebook.com/sok.thanh",
@@ -13,7 +13,7 @@
             "avatar": "images/resume/sokthanh.jpg",
             "contact": "images/resume/contact.jpg"
         },
-        "job": "Full stack developer",
+        "job": "Fullstack web developer",
         "description": "Hello! I am a guy with programming passion. The goal of this project is to get a job.",
         "favorites": [
             {

@@ -1,24 +1,14 @@
 <h3 class="rstitle">experiences</h3>
 <div class="row">
-    <div class="col-xs-12">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">Experience {{resume.experience.id}}</h3>
-            </div>
-            <div class="panel-body">
-                <ol>
-                    <li>
-                        <p>What: {{resume.experience.what}} </p>
-                    </li>
-                    <li>
-                        <p>Why: {{resume.experience.why}} </p>
-                    </li>
-                    <li>
-                        <p>How: {{resume.experience.how}} </p>
-                    </li>
-                </ol>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="list-gorup">
+            <h3>EXP {{resume.experience.id}}</h3>
+
+            <div class="list-group-item">
+                <p><strong>Why</strong>: {{resume.experience.why}} </p>
+                <p><strong>What</strong>:{{resume.experience.what}} </p>
+                <p><strong>How</strong>: {{resume.experience.how}} </p>
             </div>
         </div>
-
     </div>
 </div>
