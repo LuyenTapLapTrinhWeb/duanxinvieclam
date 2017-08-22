@@ -15,8 +15,8 @@
         </p>
         <p><i class="fa fa-calendar" aria-hidden="true"></i> {{resume.infomation.dob}}
         </p>
-        <p><i class="fa fa-birthday-cake"></i> {{resume.infomation.dob| ageFilter}} years old</p>
-        <p><i class="fa fa-location-arrow"></i> {{resume.infomation.address}}, {{resume.infomation.city}} city, {{resume.infomation.country}}</p>
+        <p class="rscontent"><i class="fa fa-birthday-cake"></i> {{resume.infomation.dob| ageFilter}} years old</p>
+        <p class="rscontent"><i class="fa fa-location-arrow"></i> {{resume.infomation.address}}, {{resume.infomation.city}} city, {{resume.infomation.country}}</p>
         <!-- <div class="col-xs-1" ng-hide="fav.id"> p </div> -->
         <div class="panel-group">
             <div class="panel panel-primary">
@@ -25,20 +25,18 @@
                         <i class="fa fa-star"></i> favorites
                     </h4>
                 </div>
-                <div id="collapse1" class="panel-collapse">
-                    <div class="panel-body">
-                        <ul id="favorites" class="list-group">
-                            <li class="list-group-item" ng-repeat="fav in resume.infomation.favorites">
-                                <p>{{fav.name}}</p>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="panel-body rscontent">
+                    <ul id="favorites" ng-repeat="fav in resume.infomation.favorites">
+                        <li>
+                            <p>{{fav.id}}. {{fav.name}}</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <p><i class="fa fa-list" aria-hidden="true"></i> {{resume.infomation.job}}
+        <p class="rscontent"><i class="fa fa-list" aria-hidden="true"></i> {{resume.infomation.job}}
         </p>
-        <p><i class="fa fa-file-text" aria-hidden="true"></i> {{resume.infomation.description}}
+        <p class="rscontent"><i class="fa fa-file-text" aria-hidden="true"></i> {{resume.infomation.description}}
         </p>
     </div>
 </div>

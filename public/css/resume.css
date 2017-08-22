@@ -9,10 +9,20 @@
 }
 
 .rstitle {
+    text-transform: uppercase;
     color: white;
     background-color: #304153;
     margin-right: auto;
     padding-left: 10px;
+}
+
+.rscontent {
+    text-transform: capitalize;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
 }
 
 #aboutme img {
@@ -29,19 +39,15 @@
     font-size: 24px;
 }
 
-#aboutme p, p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 17px;
+#favorites p {
+    color: black;
 }
-#favorites p{
-color: black;
-}
+
 #contact img {
     position: relative;
     width: 100%;
     /* for IE 6 */
 }
-
 
 #contact > div#imgcontact {
     position: absolute;
