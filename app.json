@@ -1,0 +1,16 @@
+{
+  "name": "duanxinvieclam",
+  "description": "Dự án xin việc làm gồm 1 CV và 4 apps tự xây dựng(Gemstore, photogallery, weather watch, todo)",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
