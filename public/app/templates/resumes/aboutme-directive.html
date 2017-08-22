@@ -21,34 +21,34 @@
                     <tr ng-show="resume.infomation.sex">
                         <th>sex</th>
                         <td>
-                            {{resume.infomation.sex}}
+                           <p> {{resume.infomation.sex}}</p>
                         </td>
                     </tr>
                     <tr ng-show="resume.infomation.dob">
                         <th>Birthday</th>
                         <td>
-                            {{resume.infomation.dob}}
+                            <p>{{resume.infomation.dob}}</p>
                         </td>
                     </tr>
                     <tr ng-show="resume.infomation.dob| ageFilter">
                         <th>Age</th>
                         <td>
-                            {{resume.infomation.dob| ageFilter}}
+                            <p>{{resume.infomation.dob| ageFilter}}</p>
                         </td>
                     </tr>
                     <tr ng-show="resume.infomation.address">
                         <th>Living at</th>
                         <td>
-                            {{resume.infomation.address}}, {{resume.infomation.city}} city, {{resume.infomation.country}}
+                           <p> {{resume.infomation.address}}, {{resume.infomation.city}} city, {{resume.infomation.country}}</p>
                         </td>
                     </tr>
                     <tr id="favorites" ng-show="resume.infomation.favorites">
                         <th>favorite</th>
                         <td>
                             <div class="row" ng-repeat="fav in resume.infomation.favorites">
-                                <div class="col-xs-1" ng-show="fav.id"> {{fav.id}} </div>
+                                <div class="col-xs-1" ng-hide="fav.id"> p </div>
                                 <div class="col-xs-11">
-                                    <span class="label"> {{fav.name}} </span>
+                                    <span class="label"> <p>{{fav.name}}</p> </span>
                                 </div>
                             </div>
                         </td>
