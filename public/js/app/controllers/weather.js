@@ -66,8 +66,10 @@ angular.module("weatherApp", [])
                 $http({
                     method: "GET",
                     // url: url
-                    url: "http://samples.openweathermap.org/data/2.5/forecast?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1"
+                    // url: "http://samples.openweathermap.org/data/2.5/forecast?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1"
                     // url: "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=60714b6c5ed733b26869dc7c1e762ac9"
+                    url: "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62"
+                    // ac38411101be4802b337c2766d645b62
                 }).then(function (success) {
                     // store.forecasts = success.data;
                     store.forecasts.push(success.data);
@@ -90,8 +92,11 @@ angular.module("weatherApp", [])
 
                 $http({
                     method: "GET",
-                    url: "http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1"
+                    // url: "http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1"
                     // url: "http://api.openweathermap.org/data/2.5/weather?q=saigon,vn&units=metric&appid=60714b6c5ed733b26869dc7c1e762ac9"
+                    url: "http://api.openweathermap.org/data/2.5/weather?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62"
+                    // ac38411101be4802b337c2766d645b62
+                    
                     // url: weatherUrl
                 }).then(function (success) {
                     store.weathers.push(this.date);
