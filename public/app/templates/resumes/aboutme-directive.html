@@ -1,16 +1,16 @@
 <h3 class="rstitle">about me</h3>
 <div class="row">
-    <div class="col-xs-4">
-        <figure>
+    <div class="col-xs-12 col-sm-4">
+        <figure class="text-center">
             <img class="img img-thumbnail img-responsive" ng-src="{{resume.infomation.images.avatar}}" alt="Hinh cv sok kim thanh">
             <figcaption>
                 {{resume.infomation.fullname}}
             </figcaption>
         </figure>
     </div>
-    <div class="col-xs-8">
-        <div class="table-responsive">
-            <table class="table">
+    <div class="col-xs-12 col-sm-8">
+        <div class="">
+            <table class="table table-responsive">
                 <tbody>
                     <tr ng-show="resume.infomation.fullname">
                         <th>fullname</th>
@@ -42,7 +42,7 @@
                             {{resume.infomation.address}}, {{resume.infomation.city}} city, {{resume.infomation.country}}
                         </td>
                     </tr>
-                    <tr ng-show="resume.infomation.favorites">
+                    <tr id="favorites" ng-show="resume.infomation.favorites">
                         <th>favorite</th>
                         <td>
                             <div class="row" ng-repeat="fav in resume.infomation.favorites">

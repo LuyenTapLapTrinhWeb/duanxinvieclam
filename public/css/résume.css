@@ -39,7 +39,10 @@
     width: 100%;
     /* for IE 6 */
 }
-
+#favorite span {
+    margin: 10px;
+    padding:10px;
+}
 #contact > div#imgcontact {
     position: absolute;
     top: 200px;
