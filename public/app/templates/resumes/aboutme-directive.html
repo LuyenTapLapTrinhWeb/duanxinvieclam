@@ -46,10 +46,10 @@
                         <th>favorite</th>
                         <td>
                             <div class="row" ng-repeat="fav in resume.infomation.favorites">
-                                <div class="col-xs-1" ng-hide="fav.id"> p </div>
-                                <div class="col-xs-11">
-                                    <span class="label"> <p>{{fav.name}}</p> </span>
-                                </div>
+                                <!-- <div class="col-xs-1" ng-hide="fav.id"> p </div> -->
+                                <ul class="col-xs-12">
+                                    <li class="text-left"> <p>{{fav.name}}</p> </li>
+                                </ul>
                             </div>
                         </td>
                     </tr>
