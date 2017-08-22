@@ -11,8 +11,8 @@
 .rstitle {
     color: white;
     background-color: #304153;
-    margin-right: 750px;
-    padding-left: 50px;
+    margin-right: auto;
+    padding-left: 10px;
 }
 
 #aboutme img {
@@ -33,16 +33,15 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
-
+#favorites p{
+color: black;
+}
 #contact img {
     position: relative;
     width: 100%;
     /* for IE 6 */
 }
 
-#favorite ul li {
-    
-}
 
 #contact > div#imgcontact {
     position: absolute;

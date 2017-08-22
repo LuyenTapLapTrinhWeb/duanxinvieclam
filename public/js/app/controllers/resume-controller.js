@@ -1,14 +1,13 @@
 angular.module("gemStore")
-    .controller('ResumeController', ["$http", function ($http) {
-        var store = this;
-        store.resumes = [];
+    .controller('ResumeController', function ($scope, $http) {
+        $scope.resumes = [];
         $http({
             method: "GET",
-            url: "../../../json/résume.json"
+            url: "../../../json/resume.json"
         }).then(function (success) {
-            store.resumes.push(success.data);
+            $scope.resumes.push(success.data);
         });
-    }])
+    })
     .directive('aboutmeDirective', function () {
         return {
             restrict: "E",

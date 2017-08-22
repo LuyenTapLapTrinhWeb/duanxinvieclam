@@ -1,4 +1,4 @@
-<h3 class="rstitle">about me</h3>
+<h3 class="rstitle"><i class="fa fa-info-circle"></i> about me</h3>
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-4">
         <figure class="text-center">
@@ -9,64 +9,36 @@
         </figure>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-8">
-        <div class="">
-            <table class="table table-responsive">
-                <tbody>
-                    <tr ng-show="resume.infomation.fullname">
-                        <th>fullname</th>
-                        <td>
-                            <p> {{resume.infomation.fullname}}</p>
-                        </td>
-                    </tr>
-                    <tr ng-show="resume.infomation.sex">
-                        <th>sex</th>
-                        <td>
-                            <p> {{resume.infomation.sex}}</p>
-                        </td>
-                    </tr>
-                    <tr ng-show="resume.infomation.dob">
-                        <th>Birthday</th>
-                        <td>
-                            <p>{{resume.infomation.dob}}</p>
-                        </td>
-                    </tr>
-                    <tr ng-show="resume.infomation.dob| ageFilter">
-                        <th>Age</th>
-                        <td>
-                            <p>{{resume.infomation.dob| ageFilter}}</p>
-                        </td>
-                    </tr>
-                    <tr ng-show="resume.infomation.address">
-                        <th>Living at</th>
-                        <td>
-                            <p> {{resume.infomation.address}}, {{resume.infomation.city}} city, {{resume.infomation.country}}</p>
-                        </td>
-                    </tr>
-                    <tr id="favorites" ng-show="resume.infomation.favorites">
-                        <th>favorite</th>
-                        <td>
-                            <div class="row" ng-repeat="fav in resume.infomation.favorites">
-                                <!-- <div class="col-xs-1" ng-hide="fav.id"> p </div> -->
-                                <ul class="col-xs-12">
-                                    <li class="text-left"> <p>{{fav.name}}</p> </li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr ng-show="resume.infomation.job">
-                        <th>future</th>
-                        <td>
-                            <p>{{resume.infomation.job}}</p>
-                        </td>
-                    </tr>
-                    <tr ng-show="resume.infomation.description">
-                        <th>description</th>
-                        <td>
-                            <p>{{resume.infomation.description}}</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <p><i class="fa fa-id-card" aria-hidden="true"></i> {{resume.infomation.fullname}}
+        </p>
+        <p><i class="fa fa-male" aria-hidden="true"></i> {{resume.infomation.sex}}
+        </p>
+        <p><i class="fa fa-calendar" aria-hidden="true"></i> {{resume.infomation.dob}}
+        </p>
+        <p><i class="fa fa-birthday-cake"></i> {{resume.infomation.dob| ageFilter}} years old</p>
+        <p><i class="fa fa-location-arrow"></i> {{resume.infomation.address}}, {{resume.infomation.city}} city, {{resume.infomation.country}}</p>
+        <!-- <div class="col-xs-1" ng-hide="fav.id"> p </div> -->
+        <div class="panel-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <i class="fa fa-star"></i> favorites
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse">
+                    <div class="panel-body">
+                        <ul id="favorites" class="list-group">
+                            <li class="list-group-item" ng-repeat="fav in resume.infomation.favorites">
+                                <p>{{fav.name}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+        <p><i class="fa fa-code" aria-hidden="true"></i> {{resume.infomation.job}}
+        </p>
+        <p><i class="fa fa-file-text" aria-hidden="true"></i> {{resume.infomation.description}}
+        </p>
     </div>
 </div>
