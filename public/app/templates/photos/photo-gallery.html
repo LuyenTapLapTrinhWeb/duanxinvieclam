@@ -1,9 +1,9 @@
 
 <!-- Page Content -->
-<section id="photos" ng-repeat="photo in photos.photos | limitTo: 54">
+<section id="photos" ng-repeat="photo in photoCtrl.photos | limitTo: 54">
     <ul class="col-xs-12 list-unstyled">
         <li ng-show="photo.id">
-            <a href><img class="img-fluid img-responsive img-thumbnail" ng-src="{{photo.thumbnailUrl}}"alt="{{photo.id}}.{{photo.title}}"></a>
+            <a href="/#!photos/{{photo.id}}"><img class="img-fluid img-responsive img-thumbnail" ng-src="{{photo.thumbnailUrl}}"alt="{{photo.id}}.{{photo.title}}"></a>
         </li>
     </ul>
 </section>

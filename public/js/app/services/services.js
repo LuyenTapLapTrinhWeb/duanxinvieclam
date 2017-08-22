@@ -7,7 +7,14 @@ angular.module("gemStore").config(function ($routeProvider) {
             templateUrl: "../app/store/gem/index.html"
         })
         .when('/photos', {
-            templateUrl: "../app/store/photo/index.html"
+            templateUrl: "../app/store/photo/index.html",
+            controller: "photoController",
+            controllerAs: "photoCtrl"
+        })
+        .when("/photos/:id", {
+            templateUrl: "../app/store/photo/show.html",
+            controller: "photoShowController",
+            controllerAs: "ptshowCtrl"
         })
         .when('/weathers', {
             templateUrl: "../app/store/weather/index.html"
@@ -23,5 +30,5 @@ angular.module("gemStore").config(function ($routeProvider) {
             controller: "ResumeController",
             controllerAs: "resumeCtrl"
         })
-        .otherwise({ redirectTo: "/404" })
+        // .otherwise({ redirectTo: "/404" })
 });

@@ -4,7 +4,8 @@
 
  * Version: 2.5.0 - 2017-01-28
  * License: MIT
- */angular.module("ui.bootstrap", ["ui.bootstrap.tpls","ui.bootstrap.carousel"]);
+ */
+angular.module("ui.bootstrap", ["ui.bootstrap.tpls","ui.bootstrap.carousel"]);
 angular.module("ui.bootstrap.tpls", ["uib/template/carousel/carousel.html","uib/template/carousel/slide.html"]);
 angular.module('ui.bootstrap.carousel', [])
 

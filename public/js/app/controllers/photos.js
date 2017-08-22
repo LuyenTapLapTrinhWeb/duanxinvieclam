@@ -1,32 +1,29 @@
-var app = angular.module("photo-directives", []);
+angular.module("gemStore")
+    .controller('photoController', ["$http", function ($http) {
+        var store = this;
+        store.photos = [];
+        $http({
+            method: "GET",
+            url: "https://jsonplaceholder.typicode.com/photos"
+        }).then(function (success) {
+            store.photos = success.data;
+        });
+    }]) 
 
+    .directive('photoGallery', function () {
+        return {
+            restrict: "E",
+            templateUrl: "../app/templates/photos/photo-gallery.html"
+        };
+    })
 
-// angular.module("gemStore").controller("PhotosController", function ($http) {
-//     var photos = this;
-//     photos.photos = [];
-//     $http({
-//         method: "GET",
-//         url: "https://jsonplaceholder.typicode.com/photos"
-//     }).then(function (success) { photos.photos = success.data; }, function (error) { });
-// });
-
-
-app.directive('photoGallery', function () {
-    return {
-        restrict: "E",
-        templateUrl: "../app/templates/photos/photo-gallery.html",
-        controller: function ($http) {
-            var photos = this;
-            photos.photos = [];
-            $http({
-                method: "GET",
-                url: "https://jsonplaceholder.typicode.com/photos"
-            }).then(function (success) { photos.photos = success.data; }, function (error) { });
-        },
-        controllerAs: "photos"
-    };
-});
-
-$('.carousel').carousel({
-    interval: 2000
-})
+    .controller("photoShowController", function ($scope, $http, $routeParams) {
+        $scope.photo = {};
+        $http({ method: "GET", url: "https://jsonplaceholder.typicode.com/photos/" + $routeParams.id })
+        .then(function (success) {
+            // alert(JSON.stringify(success.data));
+            $scope.photo = success.data;
+        }, function (error) {
+            alert(error)
+        });
+    })
