@@ -8,7 +8,7 @@
         "country": "VN",
         "tel": "(+84) 0163 298 8576",
         "email": "thanhsk1991@gmail.com",
-        "fb": "www.facebook.com/sok.thanh",
+        "fb": "https://www.facebook.com/sok.thanh",
         "images": {
             "avatar": "images/resume/sokthanh.jpg",
             "contact": "images/resume/contact.jpg"
@@ -139,6 +139,6 @@
         "id": 1,
         "what": "Clean code",
         "why": "Easy to test, debug, improve myself",
-        "how": "I'm practised everyday with my programing language throught tutorial video and slide and web page"
+        "how": "I practised everyday with my programing language throught tutorial video and slide and web page"
     }
 }

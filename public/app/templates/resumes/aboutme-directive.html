@@ -4,7 +4,7 @@
         <figure class="text-center">
             <img class="img img-thumbnail img-responsive" ng-src="{{resume.infomation.images.avatar}}" alt="Hinh cv sok kim thanh">
             <figcaption>
-                {{resume.infomation.fullname}}
+                <span><a class="btn btn-primary" href="{{resume.infomation.fb}}"><i class="fa fa-facebook-official"></i>/sok.thanh</a></span>
             </figcaption>
         </figure>
     </div>
@@ -15,13 +15,13 @@
                     <tr ng-show="resume.infomation.fullname">
                         <th>fullname</th>
                         <td>
-                            {{resume.infomation.fullname}}
+                            <p> {{resume.infomation.fullname}}</p>
                         </td>
                     </tr>
                     <tr ng-show="resume.infomation.sex">
                         <th>sex</th>
                         <td>
-                           <p> {{resume.infomation.sex}}</p>
+                            <p> {{resume.infomation.sex}}</p>
                         </td>
                     </tr>
                     <tr ng-show="resume.infomation.dob">
@@ -39,7 +39,7 @@
                     <tr ng-show="resume.infomation.address">
                         <th>Living at</th>
                         <td>
-                           <p> {{resume.infomation.address}}, {{resume.infomation.city}} city, {{resume.infomation.country}}</p>
+                            <p> {{resume.infomation.address}}, {{resume.infomation.city}} city, {{resume.infomation.country}}</p>
                         </td>
                     </tr>
                     <tr id="favorites" ng-show="resume.infomation.favorites">
