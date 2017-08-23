@@ -1,0 +1,12 @@
+<tr class="row" ng-repeat="soft in resume.skills.softwares">
+    <td class="col-xs-12 col-sm-12 col-md-12">
+        <div class="list-group">
+            <div class="list-group-item">
+                <a href><img ng-show="soft.icon" class="img img-rounded img-responsive" ng-src="{{soft.icon}}" alt="{{soft.name}}"></a>
+                <span for="name" class="label label-danger">{{soft.name}}</span>
+                <span for="level" class="label label-primary">{{soft.level}}</span>
+                <span for="status" class="label label-success">{{soft.status}}</span>
+            </div>
+        </div>
+    </td>
+</tr>

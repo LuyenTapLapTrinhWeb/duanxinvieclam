@@ -1,57 +1,11 @@
 <h3 class="rstitle">skills</h3>
-
-
 <table class="">
     <tbody>
         <skills-tab></skills-tab>
-        <tr ng-show="skillTabCtrl.isSet(1)" class="row" ng-repeat="lang in resume.skills.languages">
-            <td class="col-xs-12 col-sm-12 col-md-12">
-                <div class="list-group">
-                    <div ng-show="lang.framework" class="list-group-item">
-                        <a href><img ng-show="lang.icon" class="img img-rounded img-responsive" ng-src="{{lang.icon}}" alt="{{lang.icon}}"></a>
-                        <span for="framework" class="label label-danger">{{lang.framework}}</span>
-                        <span for="level" class="label label-primary">Level {{lang.level}}</span>
-                        <span for="version" class="label label-warning">Version {{lang.version}}</span>
-                        <span for="status" class="label label-success">{{lang.status}}</span>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr ng-show="skillTabCtrl.isSet(2)" class="row">
-            <td class="col-xs-12 col-sm-12 col-md-12">
-                <div class="list-group">
-                    <div class="list-group-item">
-                        <a href><img ng-show="resume.skills.databases.icon" class="img img-rounded img-responsive" ng-src="{{resume.skills.databases.icon}}" alt="{{resume.skills.databases.name}}"></a>
-                        <span for="name" class="label label-danger">{{resume.skills.databases.name}}</span>
-                        <span for="level" class="label label-primary">{{resume.skills.databases.level}} </span>
-                        <span for="status" class="label label-success">{{resume.skills.databases.status}} </span>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr ng-show="skillTabCtrl.isSet(3)" class="row" ng-repeat="eng in resume.skills.english">
-            <td class="col-xs-12 col-sm-12 col-md-12">
-                <div class="list-group">
-                    <div class="list-group-item">
-                            <a href><img ng-show="eng.icon" class="img img-rounded img-responsive" ng-src="{{eng.icon}}" alt="{{eng.icon}}"></a>
-                        <span for="book" class="label label-danger">{{eng.book}}</span>
-                        <span for="level" class="label label-primary">{{eng.level}}</span>
-                        <span for="status" class="label label-success">{{eng.status}}</span>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr ng-show="skillTabCtrl.isSet(4)" class="row" ng-repeat="soft in resume.skills.softwares">
-            <td class="col-xs-12 col-sm-12 col-md-12">
-                <div class="list-group">
-                    <div class="list-group-item">
-                        <a href><img ng-show="soft.icon" class="img img-rounded img-responsive" ng-src="{{soft.icon}}" alt="{{soft.name}}"></a>
-                        <span for="name" class="label label-danger">{{soft.name}}</span>
-                        <span for="level" class="label label-primary">{{soft.level}}</span>
-                        <span for="status" class="label label-success">{{soft.status}}</span>
-                    </div>
-                </div>
-            </td>
-        </tr>
+        <div ng-show="skillTabCtrl.isSet(1)" framework-directive></div>
+        <div ng-show="skillTabCtrl.isSet(2)" database-directive></div>
+        <div ng-show="skillTabCtrl.isSet(3)" english-directive></div>
+        <div ng-show="skillTabCtrl.isSet(4)" software-directive></div>
+         
     </tbody>
 </table>

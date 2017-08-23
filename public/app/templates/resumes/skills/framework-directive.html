@@ -1,0 +1,13 @@
+<tr  class="row" ng-repeat="lang in resume.skills.languages">
+    <td class="col-xs-12 col-sm-12 col-md-12">
+        <div class="list-group">
+            <div ng-show="lang.framework" class="list-group-item">
+                <a href><img ng-show="lang.icon" class="img img-rounded img-responsive" ng-src="{{lang.icon}}" alt="{{lang.icon}}"></a>
+                <span for="framework" class="label label-danger">{{lang.framework}}</span>
+                <span for="level" class="label label-primary">Level {{lang.level}}</span>
+                <span for="version" class="label label-warning">Version {{lang.version}}</span>
+                <span for="status" class="label label-success">{{lang.status}}</span>
+            </div>
+        </div>
+    </td>
+</tr>

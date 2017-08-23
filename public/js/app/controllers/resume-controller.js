@@ -38,6 +38,30 @@ angular.module("gemStore")
             templateUrl: "../app/templates/resumes/skill-directive.html"
         };
     })
+    .directive('databaseDirective', function () {
+        return {
+            restrict: "A",
+            templateUrl: "../app/templates/resumes/skills/database-directive.html"
+        };
+    })
+    .directive('englishDirective', function () {
+        return {
+            restrict: "A",
+            templateUrl: "../app/templates/resumes/skills/english-directive.html"
+        };
+    })
+    .directive('frameworkDirective', function () {
+        return {
+            restrict: "A",
+            templateUrl: "../app/templates/resumes/skills/framework-directive.html"
+        };
+    })
+    .directive('softwareDirective', function () {
+        return {
+            restrict: "A",
+            templateUrl: "../app/templates/resumes/skills/software-directive.html"
+        };
+    })
     .directive('resumeTab', function () {
         return {
             restrict: "E",

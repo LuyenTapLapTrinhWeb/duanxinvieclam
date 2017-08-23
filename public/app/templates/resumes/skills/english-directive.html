@@ -1,0 +1,12 @@
+<tr class="row" ng-repeat="eng in resume.skills.english">
+    <td class="col-xs-12 col-sm-12 col-md-12">
+        <div class="list-group">
+            <div class="list-group-item">
+                <a href><img ng-show="eng.icon" class="img img-rounded img-responsive" ng-src="{{eng.icon}}" alt="{{eng.icon}}"></a>
+                <span for="book" class="label label-danger">{{eng.book}}</span>
+                <span for="level" class="label label-primary">{{eng.level}}</span>
+                <span for="status" class="label label-success">{{eng.status}}</span>
+            </div>
+        </div>
+    </td>
+</tr>
