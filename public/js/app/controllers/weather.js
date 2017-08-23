@@ -59,28 +59,32 @@ angular.module("weatherApp", [])
         return {
             restrict: "E",
             templateUrl: "../app/templates/weathers/forecast-directive.html",
-            controller: function ($sce, $http) {
-                var store = this;
-                store.forecasts = [];
+            controller: function ($scope, $sce, $http) {
 
-                let url = "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62";
-                // var trustedUrl = $sce.trustAsResourceUrl(url);
+                // $scope.forecast = {};
+                $scope.forecasts = [];
 
-                $http.jsonp(url, { jsonpCallbackParam: 'callback' })
-                    .then(function (success) {
-                        // console.log(success.data);
-                        store.forecasts.push(success.data);
-                    }, function (error) { })
-                /*$http({
+                let url = "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62&callback=JSONP_CALLBACK";
+                var trustedUrl = $sce.trustAsResourceUrl(url);
+                $.getJSON(trustedUrl).done(function (success) {
+                    // console.log(success);
+                    $scope.forecasts.push(success);
+                });
+                // $http.jsonp(url, { jsonpCallbackParam: 'callback' })
+                //     .then(function (success) {
+                //         // console.log(success.data);
+                //         $scope.forecasts.push(success.data);
+                //     }, function (error) { })
+               /* $http({
                     method: "GET",
                     // url: url
                     // url: "http://samples.openweathermap.org/data/2.5/forecast?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1"
                     // url: "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=60714b6c5ed733b26869dc7c1e762ac9"
-                    url: "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62"
+                    url: "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62&callback=JSONP_CALLBACK"
                     // ac38411101be4802b337c2766d645b62
                 }).then(function (success) {
                     // store.forecasts = success.data;
-                    store.forecasts.push(success.data);
+                    $scope.forecasts.push(success.data);
                 }, function (error) { })*/
             },
             controllerAs: "forecastCtrl"
