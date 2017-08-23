@@ -64,16 +64,15 @@ angular.module("weatherApp", [])
                 $scope.forecast = {};
                 // $scope.forecasts = [];
                 // url: "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&callback=test&appid=b1b15e88fa797225412429c1c50c122a1";
-                let url = "https://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62&callback=JSON_CALLBACK";
+                let url = "https://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62";
                 var trustedUrl = $sce.trustAsResourceUrl(url);
                 // $.getJSON(url).done(function (success) {
                 //     // console.log(success);
                 //     $scope.forecasts.push(success);
                 // });
                 $http.jsonp(trustedUrl, { jsonpCallbackParam: 'callback' })
-                    .success(function (success) {
-                        // console.log(success.data);
-                        // $scope.forecasts.push(success.data);
+                    .then(function (success) {
+                        console.log(success.data);
                         $scope.forecast = success.data;
                     })
                 /*  $http({
