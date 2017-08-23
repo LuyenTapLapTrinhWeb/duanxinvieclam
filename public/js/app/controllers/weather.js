@@ -105,7 +105,7 @@ angular.module("weatherApp", [])
                 this.date.createdOn = Date.now();
 
                 // let url = "../json/weather.json";
-                let url = "http://api.openweathermap.org/data/2.5/weather?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62";
+                let url = "https://api.openweathermap.org/data/2.5/weather?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62";
                 var trustedUrl = $sce.trustAsResourceUrl(url);
                 // var url = "http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts?callback=JSON_CALLBACK";
 
