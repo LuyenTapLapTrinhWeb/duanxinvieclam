@@ -76,14 +76,16 @@
                 "level": "basic",
                 "book": "toeic",
                 "icon": "images/resume/starter-toeic.jpg",
-                "status": "completed"
+                "status": "completed",
+                "title": "Toeic getting starter"
             },
             {
                 "level": "basic",
                 "book": "english",
                 "author": "Lottie stride",
                 "icon": "images/resume/lottie-stride.jpg",
-                "status": "completed"
+                "status": "completed",
+                "title": "Some good ways to improve your english"
             }
         ],
         "languages": [
