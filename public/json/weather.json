@@ -1,1 +1,42 @@
-{"coord":{"lon":106.67,"lat":10.75},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04n"}],"base":"stations","main":{"temp":26,"pressure":1007,"humidity":88,"temp_min":26,"temp_max":26},"visibility":10000,"wind":{"speed":3.6,"deg":200},"clouds":{"all":90},"dt":1503491400,"sys":{"type":1,"id":7985,"message":0.0078,"country":"VN","sunrise":1503441825,"sunset":1503486465},"id":1566083,"name":"Thanh pho Ho Chi Minh","cod":200}
+{
+    "coord": {
+        "lon": 106.67,
+        "lat": 10.75
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 26,
+        "pressure": 1007,
+        "humidity": 88,
+        "temp_min": 26,
+        "temp_max": 26
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.6,
+        "deg": 200
+    },
+    "clouds": {
+        "all": 90
+    },
+    "dt": 1503491400,
+    "sys": {
+        "type": 1,
+        "id": 7985,
+        "message": 0.0078,
+        "country": "VN",
+        "sunrise": 1503441825,
+        "sunset": 1503486465
+    },
+    "id": 1566083,
+    "name": "Thanh pho Ho Chi Minh",
+    "cod": 200
+}

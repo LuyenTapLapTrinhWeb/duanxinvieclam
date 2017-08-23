@@ -1,7 +1,6 @@
-<div ng-init="weatherCtrl.date.createdOn"></div>
+<div ng-init="wea.date.createdOn"></div>
 
-<div ng-repeat="wea in weatherCtrl.weathers">
-  
+<div> 
     <div ng-repeat="w in wea.weather">
         <header>
             <h2><strong>Weather in {{wea.name}}, {{wea.sys.country}}</strong></h2>
