@@ -120,7 +120,7 @@ angular.module("weatherApp", [])
                 $http.jsonp(trustedUrl, { jsonpCallbackParam: 'callback' })
                     .then(function (success) {
                         console.log(success.data);
-                        // $scope.forecasts.push(success.data);
+                        $scope.wea.date = this.date;
                         $scope.wea = success.data;
                     })
                 /* $http({
