@@ -66,15 +66,15 @@ angular.module("weatherApp", [])
 
                 let url = "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62&callback=JSONP_CALLBACK";
                 var trustedUrl = $sce.trustAsResourceUrl(url);
-                $.getJSON(url).done(function (success) {
-                    // console.log(success);
-                    $scope.forecasts.push(success);
-                });
-                // $http.jsonp(url, { jsonpCallbackParam: 'callback' })
-                //     .then(function (success) {
-                //         // console.log(success.data);
-                //         $scope.forecasts.push(success.data);
-                //     }, function (error) { })
+                // $.getJSON(url).done(function (success) {
+                //     // console.log(success);
+                //     $scope.forecasts.push(success);
+                // });
+                $http.jsonp(trustedUrl, { jsonpCallbackParam: 'callback' })
+                    .then(function (success) {
+                        // console.log(success.data);
+                        $scope.forecasts.push(success.data);
+                    }, function (error) { })
                /* $http({
                     method: "GET",
                     // url: url
