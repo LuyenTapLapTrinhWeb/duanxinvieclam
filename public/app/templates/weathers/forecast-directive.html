@@ -10,7 +10,7 @@
         <div class="weather-forecast-icons">
             <ul class="list-inline" ng-repeat="list in forecast.list| limitTo: 13">
                 <li ng-repeat="weather in list.weather">
-                    <img class="img img-circle img-responsive" ng-src="http://openweathermap.org/img/w/{{weather.icon}}.png">
+                    <img class="img img-circle img-responsive" ng-src="https://openweathermap.org/img/w/{{weather.icon}}.png">
                     <div class="small_val" title="Temp">{{list.main.temp}}°C </div>
                     <div class="small_val" title="Wind">{{list.wind.speed}} m/s , </div>
                     <div class="small_val_grey" title="Pressure">{{list.main.pressure}} </div>
