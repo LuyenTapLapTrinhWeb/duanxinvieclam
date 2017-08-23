@@ -1,13 +1,15 @@
 <h3 class="rstitle">educations</h3>
-<ul class="row list-inline" ng-repeat="edu in resume.educations">
-    <li class="col-xs-12 col-sm-12 col-md-3">
-        <div class="list-group">
-            <div class="list-group-item">
-                <a ng-href="{{edu.url}}" target="_blank">
-                                                <img class="img img-thumbnail img-responsive" ng-src="{{edu.logo}}" alt="{{edu.schoolname}}"></a>
-                <br><span class="label label-warning">{{edu.years}}</span>
-                <br><span class="label label-danger"> {{edu.activity}}</span>
+<table>
+    <tr class="row" ng-repeat="edu in resume.educations">
+        <td class="col-xs-12 col-sm-12 col-md-12">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <a ng-href="{{edu.url}}" target="_blank">
+                        <img class="img img-thumbnail img-responsive" ng-src="{{edu.logo}}" alt="{{edu.schoolname}}"></a>
+                    <br><span class="label label-warning">{{edu.years}}</span>
+                    <br><span class="label label-danger"> {{edu.activity}}</span>
+                </div>
             </div>
-        </div>
-    </li>
-</ul>
+        </td>
+    </tr>
+</table>
