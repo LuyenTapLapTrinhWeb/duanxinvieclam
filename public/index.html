@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components\font-awesome\css\font-awesome.css">
     <link rel="stylesheet" href="css\photos.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     
 </head>
 
@@ -28,16 +29,17 @@
     <div class="container" ng-view></div>
     <!-- <ng-view ng-class="container:"></ng-view>  -->
     <!-- <div class="ng-view"></div>  -->
+   <div class="container" ng-include="'./app/templates/footers/index.html'"></div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
-    
+
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <!-- <script src="bower_components\angular-ui-bootstrap\ui-bootstrap-tpls-2.5.0.min.js"></script> -->
     <!-- <script src="bower_components\ng-photoswipe\angular-photoswipe.min.js"></script> -->
     <!-- <script src="bower_components\photoswipe\dist\photoswipe.min.js"></script> -->
-    
+
     <script src="js/app/modules/gem-store.js"></script>
     <script src="js/app/controllers/store-controller.js"></script>
 
@@ -48,7 +50,7 @@
     <script src="js/app/controllers/photos.js"></script>
     <script src="js/app/controllers/weather.js"></script>
     <script src="js/app/controllers/todo.js"></script>
-    
+
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
     <script src="js/app/services/highcharts.js"></script>

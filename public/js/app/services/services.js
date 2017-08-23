@@ -1,7 +1,10 @@
 angular.module("gemStore").config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            redirectTo: "/resume"
+            templateUrl: "../app/store/homepage/index.html"
+        })
+        .when("/home", {
+            templateUrl: "../app/store/homepage/index.html"
         })
         .when("/gems", {
             templateUrl: "../app/store/gem/index.html"
