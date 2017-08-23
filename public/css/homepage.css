@@ -1,0 +1,10 @@
+#bannerhp img{
+    min-height: 100px;
+    max-height: 390px;
+    height: auto;
+    width: 100%;
+}
+video {
+    width: 100%;
+    height: auto;
+}

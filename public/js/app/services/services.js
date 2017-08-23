@@ -33,5 +33,5 @@ angular.module("gemStore").config(function ($routeProvider) {
             controller: "ResumeController",
             controllerAs: "resumeCtrl"
         })
-        // .otherwise({ redirectTo: "/404" })
+        .otherwise({ redirectTo: "/404" })
 });

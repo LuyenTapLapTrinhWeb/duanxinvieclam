@@ -4,12 +4,15 @@
 }
 
 #slides_control > div {
-  height: 700px;
+  height: auto;
 }
 
 #slides_control img#banner {
   margin: auto;
-  width: 1200px;
+   min-height: 100px;
+  max-height: 390px;
+  height: auto;
+  width: 100%;
 }
 
 #slides_control {
