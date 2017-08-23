@@ -1,3 +1,7 @@
+// $http.jsonp('https://jsonplaceholder.typicode.com/photos?api_key=[MY SECRET API Key]&callback=JSON_CALLBACK')
+// .success(function (data) {
+//   // my data analysis process
+// });
 angular.module("gemStore")
     .controller('photoController', ["$http", function ($http) {
         var store = this;
