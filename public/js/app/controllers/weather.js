@@ -59,16 +59,54 @@ angular.module("weatherApp", [])
         return {
             restrict: "E",
             templateUrl: "../app/templates/weathers/forecast-directive.html",
-            controller: function ($http) {
+            controller: function ($scope, $http) {
                 var store = this;
                 store.forecasts = [];
-                let url = "../json/forecast.json";
+
+                // var url = "http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts?callback=JSON_CALLBACK";
+
+
+
+                // let url = "../json/forecast.json";
+                // let key = "ac38411101be4802b337c2766d645b62";
+                // let url = "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62";
+                // angular.callbacks._0(url);
+                // $http({method:"GET",url:url})
+                //     .then(function (success) {
+                //         alert(JSON.stringify(data));
+                //         // store.forecasts = success.data;
+                //         store.forecasts.push(success.data);
+
+                //     }, function (error) { })
+
+                // function jsonp_callback(data) {
+                //     var el = document.getElementById('ctl');
+                //     var scope = angular.element(el).scope();
+                //     scope.$apply(function () {
+                //         scope.data = JSON.stringify(data);
+                //     });
+                // }
+
+                // $http.jsonp(url)
+                //     .success(function (success) {
+                //         // console.log(data.found);
+                //         store.forecasts.push(success.data);
+
+                //     });
+                // var url = "http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts"
+                // var trustedUrl = $sce.trustAsResourceUrl(urlapi);
+
+                // $http.jsonp(trustedUrl, {jsonpCallbackParam: 'callback'})
+                //     .success(function(success){
+                //         // console.log(data.found);
+                //         store.forecasts.push(success.data);
+                //     });
                 $http({
                     method: "GET",
-                    url: url
+                    // url: url
                     // url: "http://samples.openweathermap.org/data/2.5/forecast?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1"
                     // url: "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=60714b6c5ed733b26869dc7c1e762ac9"
-                    // url: "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62"
+                    url: "http://api.openweathermap.org/data/2.5/forecast?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62"
                     // ac38411101be4802b337c2766d645b62
                 }).then(function (success) {
                     // store.forecasts = success.data;
@@ -86,24 +124,33 @@ angular.module("weatherApp", [])
             controller: function ($http) {
                 var store = this;
                 store.weathers = [];
-                let url = "../json/weather.json";
+
                 this.date = {};
                 this.date.createdOn = Date.now();
 
+                // let url = "../json/weather.json";
+                // let url = "http://api.openweathermap.org/data/2.5/weather?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62";
+                // $http.jsonp(url, { jsonpCallbackParam: 'callback' })
+                //     .then(function (success) {
+                //         store.weathers.push(this.date);
+                //         // console.log(success.data);
+                //         store.weathers.push(success.data);
+                //     }, function (error) { })
                 $http({
                     method: "GET",
-                    url:url
+                    // url: url
                     // url: "http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1"
                     // url: "http://api.openweathermap.org/data/2.5/weather?q=saigon,vn&units=metric&appid=60714b6c5ed733b26869dc7c1e762ac9"
-                    // url: "http://api.openweathermap.org/data/2.5/weather?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62"
+                    url: "http://api.openweathermap.org/data/2.5/weather?q=saigon,vn&units=metric&appid=ac38411101be4802b337c2766d645b62"
                     // ac38411101be4802b337c2766d645b62
-                    
+
                     // url: weatherUrl
                 }).then(function (success) {
                     store.weathers.push(this.date);
                     // console.log(success.data);
                     store.weathers.push(success.data);
                 }, function (error) { })
+
             },
             controllerAs: "weatherCtrl"
         };
