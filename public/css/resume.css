@@ -79,3 +79,14 @@ body {
 #bodybg {
     border-radius: 5px;
 }
+#downloadcv{
+    text-decoration: none;
+    
+}
+#downloadcv:hover{
+   color: black;
+    
+}
+#downloadcv i:hover{
+    color: red;
+}
