@@ -1,10 +1,23 @@
-
+<form action="" method="POST" class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for=" control-label col-xs-2" class="col-sm-2">Album</label>
+        <div class="col-xs-10">
+            <!-- <select class="form-control" ng-model="albumId">
+                <option value="{{key}}" ng-repeat="(key, value) in photos | groupBy: 'albumId'">{{key}}</option>
+            </select> -->
+            <p ng-model="albumId" value="{{key}}" ng-repeat="(key, value) in photos | groupBy: 'albumId'">{{key}}</p>
+        </div>
+    </div>
+</form>
 <!-- Page Content -->
-<section id="photos" ng-repeat="photo in photoCtrl.photos | limitTo: 54">
-    <ul class="col-xs-12 list-unstyled">
-        <li ng-show="photo.id">
-            <a href="/#!photos/{{photo.id}}"><img class="img-fluid img-responsive img-thumbnail" ng-src="{{photo.thumbnailUrl}}"alt="{{photo.id}}.{{photo.title}}"></a>
-        </li>
-    </ul>
-</section>
+<div id="photos" ng-repeat="photo in photos">
+    <!-- <div ng-show="photo.albumId == albumId"> -->
+    <div>
+        <ul class="col-xs-12 list-unstyled">
+            <li>
+                <a href="/#!photos/{{photo.id}}"><img class="img-fluid img-responsive img-thumbnail" ng-src="{{photo.thumbnailUrl}}"alt="{{photo.id}}.{{photo.title}}"></a>
+            </li>
+        </ul>
+    </div>
+</div>
 <!-- /.container -->

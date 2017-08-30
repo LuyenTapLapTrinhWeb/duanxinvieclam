@@ -5,3 +5,10 @@
     margin: auto;
     /* width: 100px; */
 }
+#album img{
+    width: 60%;
+    height: auto;
+}
+#album a:hover{
+    color: red;
+}

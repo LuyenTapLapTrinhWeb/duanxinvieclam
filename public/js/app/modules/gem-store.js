@@ -1,4 +1,4 @@
 //specify module
-var app = angular.module("gemStore", ['ngRoute','store-directives','todoApp','weatherApp']);
+var app = angular.module("gemStore", ['angular.filter','ngRoute','store-directives','todoApp','weatherApp']);
 
 

@@ -19,6 +19,11 @@ angular.module("gemStore").config(function ($routeProvider) {
             controller: "photoShowController",
             controllerAs: "ptshowCtrl"
         })
+        .when("/photos/album/:albumId", {
+            templateUrl: "../app/store/photo/photo.html",
+            controller: "productPhotoController",
+            controllerAs: "ppCtrl"
+        })
         .when('/weathers', {
             templateUrl: "../app/store/weather/index.html"
         })
