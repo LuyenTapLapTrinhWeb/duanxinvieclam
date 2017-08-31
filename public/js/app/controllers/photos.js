@@ -29,10 +29,10 @@ angular.module("gemStore")
             templateUrl: "../app/templates/photos/album-gallery.html"
         };
     })
-    .directive('productGallery', function () {
+    .directive('pictureGallery', function () {
         return {
             restrict: "E",
-            templateUrl: "../app/templates/photos/product-gallery.html"
+            templateUrl: "../app/templates/photos/picture-gallery.html"
         };
     })
     .controller("photoShowController", function ($scope, $http, $routeParams) {
@@ -99,5 +99,17 @@ angular.module("gemStore")
         return {
             restrict: "E",
             templateUrl: "../app/templates/photos/header-gallery.html"
+        };
+    })
+    .directive('searchPhoto', function () {
+        return {
+            restrict: "E",
+            templateUrl: "../app/templates/photos/search-photo.html"
+        };
+    })
+    .directive('searchAlbum', function () {
+        return {
+            restrict: "E",
+            templateUrl: "../app/templates/photos/search-album.html"
         };
     })
