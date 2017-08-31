@@ -12,3 +12,6 @@
 #album a:hover{
     color: red;
 }
+#background:hover, #photo li:hover{
+    background-color: yellow;
+} 

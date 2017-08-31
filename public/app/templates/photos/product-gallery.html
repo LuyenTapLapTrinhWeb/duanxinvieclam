@@ -1,0 +1,23 @@
+<section id="product">
+    <!-- <div class="form-group">
+        <label for="search" class="col-xs-2 control-label">Search</label>
+
+        <div class="col-xs-10">
+            <input type="search" class="form-control" ng-model="keymodel">
+        </div>
+    </div> -->
+    
+    <div class="d-block" ng-repeat="(key, value) in photos | groupBy: 'albumId'">
+        <a href="/#!photos/album/{{key}}">
+            <figure class="figure col-xs-1   bg-success">
+                <img ng-src="{{pg.thumbnailUrl
+                }}" class="figure-img img-fluid rounded" alt="album icon {{ key }}">
+                <figcaption class="figure-caption text-xs-right"> <label class="pull-left" for="albumId">Album ID: {{key}}</label></figcaption>
+            </figure>
+            <!-- <li ng-repeat="player in value"> -->
+            <!-- player: {{ player.title }} -->
+            <!-- </li> -->
+        </a>
+    </div>
+
+</section>

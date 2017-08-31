@@ -1,22 +1,23 @@
+
 <section id="album">
-    <!-- <div class="form-group">
-        <label for="search" class="col-xs-2 control-label">Search</label>
+    <div class="form-group">
+        <label for="search" class="col-xs-12 col-sm-2 control-label">ID Album:</label>
 
-        <div class="col-xs-10">
-            <input type="search" class="form-control" ng-model="keymodel">
+        <div class="col-xs-12 col-sm-10">
+            <input type="number" class="form-control" ng-model="keyPress.albumId">
         </div>
-    </div> -->
+    </div>
 
-    <div class="d-block" ng-repeat="(key, value) in photos | groupBy: 'albumId'">
-        <a href="/#!photos/album/{{key}}">
-            <figure class="figure col-xs-1   bg-success">
-                <img ng-src="images/photos/album.png" class="figure-img img-fluid rounded" alt="album icon {{ key }}">
-                <figcaption class="figure-caption text-xs-right"> <label class="pull-left" for="albumId">Album ID: {{key}}</label></figcaption>
-            </figure>
+    <div ng-repeat="(albumId,value) in photos | filter:keyPress | groupBy:'albumId'">
+
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div id="background" class="bg-success">
+                <a href="/#!photos/album/{{albumId}}"><label for="albumId">{{albumId}}</label>
+                    <img ng-src="images/photos/album.png" class="img  img-responsive img-rounded " alt="album id {{albumId}}"></a>
+            </div>
             <!-- <li ng-repeat="player in value"> -->
             <!-- player: {{ player.title }} -->
             <!-- </li> -->
-        </a>
+        </div>
     </div>
-
 </section>

@@ -1,23 +1,39 @@
-<form action="" method="POST" class="form-horizontal" role="form">
+<!-- <form action="" method="POST" class="form-horizontal" role="form">
     <div class="form-group">
-        <label for=" control-label col-xs-2" class="col-sm-2">Album</label>
-        <div class="col-xs-10">
-            <!-- <select class="form-control" ng-model="albumId">
+        <label for="albumId" class="col-xs-12 control-label col-xs-2">ID album:</label>
+        <div class="col-xs-12 col-sm-10">
+            <select class="form-control" ng-model="albumId">
                 <option value="{{key}}" ng-repeat="(key, value) in photos | groupBy: 'albumId'">{{key}}</option>
-            </select> -->
+            </select>
+        </div>
+    </div>
+</form> -->
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="albumId" class="col-xs-12 control-label col-xs-2">ID album:</label>
+        <div class="col-xs-12 col-sm-10">
             <p ng-model="albumId" value="{{key}}" ng-repeat="(key, value) in photos | groupBy: 'albumId'">{{key}}</p>
         </div>
     </div>
-</form>
+    <div class="form-group">
+        <label for="search" class="col-xs-12 col-sm-2 control-label">ID photo:</label>
+        <div class="col-xs-12 col-sm-10">
+            <input type="number" class="form-control" ng-model="keyPress.id">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-xs-12"><a class="btn btn-danger" href="/#!photos">Back</a></div>
+    </div>
+    <listview-tab></listview-tab>
+</div>
 <!-- Page Content -->
-<div id="photos" ng-repeat="photo in photos">
+<div>
     <!-- <div ng-show="photo.albumId == albumId"> -->
-    <div>
-        <ul class="col-xs-12 list-unstyled">
-            <li>
-                <a href="/#!photos/{{photo.id}}"><img class="img-fluid img-responsive img-thumbnail" ng-src="{{photo.thumbnailUrl}}"alt="{{photo.id}}.{{photo.title}}"></a>
-            </li>
-        </ul>
+    <div ng-show="listviewCtrl.isSet(1)">
+      <image-view></image-view>
+    </div>
+    <div ng-show="listviewCtrl.isSet(2)">
+        <table-view></table-view>
     </div>
 </div>
 <!-- /.container -->
