@@ -7,6 +7,7 @@ angular.module("gemStore")
 
         $scope.photos = [];
         $scope.limitTo = 1000;
+       
         $http({
             method: "GET",
             url: "https://jsonplaceholder.typicode.com/photos"
@@ -36,6 +37,7 @@ angular.module("gemStore")
         };
     })
     .controller("photoShowController", function ($scope, $http, $routeParams) {
+
         $scope.photo = {};
         $http({ method: "GET", url: "https://jsonplaceholder.typicode.com/photos/" + $routeParams.id })
             .then(function (success) {
@@ -48,6 +50,8 @@ angular.module("gemStore")
     // https://jsonplaceholder.typicode.com/photos?albumId=1
     .controller("productPhotoController", function ($scope, $http, $routeParams) {
         $scope.photos = [];
+          
+       
         $http({ method: "GET", url: "https://jsonplaceholder.typicode.com/photos?albumId=" + $routeParams.albumId })
             .then(function (success) {
                 // alert(JSON.stringify(success.data));
@@ -113,3 +117,10 @@ angular.module("gemStore")
             templateUrl: "../app/templates/photos/search-album.html"
         };
     })
+    .directive('blazyLoad', function () {
+        return {
+            restrict: "E",
+            templateUrl: "../app/templates/photos/blazy-load.html"
+        };
+    })
+

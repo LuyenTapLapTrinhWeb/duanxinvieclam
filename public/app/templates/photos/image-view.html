@@ -1,9 +1,19 @@
-  <div ng-repeat="photo in photos | filter:keyPress">
-            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+<div ng-repeat="photo in photos | filter:keyPress">
+    <div id="preload" class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 
-                <div id="background" class="bg-success">
-                    <a href="/#!photos/{{photo.id}}"><label for="albumId">{{photo.id}}</label>
-                            <img class="img  img-responsive img-rounded center-block"ng-src="{{photo.thumbnailUrl}}"alt="{{photo.id}}.{{photo.title}}"></a>
-                </div>
-            </div>
+        <div id="background" class="bg-success">
+            <a href="/#!photos/{{photo.id}}">
+                <label for="albumId">{{photo.id}}</label>
+                <img  
+                ng-src=data:{{photo.thumbnailUrl}};base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                class="b-lazy  conqua img-rounded center-block" 
+                data-src="{{photo.thumbnailUrl}}"
+                
+                data-src-small="{{photo.thumbnailUrl}}"
+                alt="{{photo.thumbnailUrl}}"/>
+            </a>
         </div>
+
+    </div>
+</div>
+<blazy-load></blazy-load>

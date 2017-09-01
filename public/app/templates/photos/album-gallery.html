@@ -1,11 +1,16 @@
-
 <section id="album">
     <search-album></search-album>
     <div ng-repeat="(albumId,value) in photos | filter:keyPress | groupBy:'albumId'">
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            
             <div id="background" class="bg-success">
                 <a href="/#!photos/album/{{albumId}}"><label for="albumId">{{albumId}}</label>
-                    <img ng-src="images/photos/album.png" class="img  img-responsive img-rounded center-block" alt="album id {{albumId}}"></a>
+                    <img class="b-lazy img img-responsive img-rounded center-block" 
+                    data-src="images/photos/album.png"
+                    ng-src="images/photos/album.png"
+                    data-src-small="images/photos/album.png"
+                    alt="{{albumId}}" />
+                </a>
             </div>
             <!-- <li ng-repeat="player in value"> -->
             <!-- player: {{ player.title }} -->
@@ -13,3 +18,4 @@
         </div>
     </div>
 </section>
+<blazy-load></blazy-load>

@@ -20,6 +20,7 @@
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "font-awesome": "^4.7.0",
-    "angular-filter": "^0.5.16"
+    "angular-filter": "^0.5.16",
+    "bLazy": "blazy#^1.8.2"
   }
 }

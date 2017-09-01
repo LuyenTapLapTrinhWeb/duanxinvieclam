@@ -16,13 +16,15 @@
     <link rel="stylesheet" href="css\photos.css">
     <link rel="stylesheet" href="css\homepage.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-    
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> -->
+
 </head>
 
 
 <body ng-controller="StoreController as store">
+  
     <div class="container">
+
         <div class="row">
             <menu-tab></menu-tab>
         </div>
@@ -31,7 +33,7 @@
     <div class="container" ng-view></div>
     <!-- <ng-view ng-class="container:"></ng-view>  -->
     <!-- <div class="ng-view"></div>  -->
-   <div class="container" ng-include="'./app/templates/footers/index.html'"></div>
+    <div class="container" ng-include="'./app/templates/footers/index.html'"></div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -59,7 +61,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
     <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+     
+    <script src="bower_components/bLazy/blazy.min.js"></script>
+    
 </body>
 
 </html>
