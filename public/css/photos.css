@@ -28,20 +28,3 @@
     padding-bottom: 1%;
 } */
 
-
-@keyframes myChange {
-    from {
-        height: 100px;
-    } to {
-        height: 0;
-    }
-  }
-  
-  div#div {
-    height: 100px;
-    background-color: lightblue;
-  }
-  
-  div.ng-hide {
-    animation: 0.5s myChange;
-  }
