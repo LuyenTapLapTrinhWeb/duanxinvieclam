@@ -21,3 +21,31 @@
   /* height: 300px; */
     top: 20px;
 }
+.component {
+  border: 1px solid purple;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 0 2px 5px purple;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+}
+.controller {
+  border-bottom: 1px solid purple;
+  /* border-radius: 5px; */
+  margin: 10px;
+  /* box-shadow: 0 0 0 purple; */
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /* font-size: 12px; */
+  padding: 10px;
+}
+.customview{
+  /* width: 50%; */
+  height: 200px;
+}
+.hoveritem:hover{
+  border-left: 10px solid purple;
+}
+.calendar{
+  margin: 20px;
+}

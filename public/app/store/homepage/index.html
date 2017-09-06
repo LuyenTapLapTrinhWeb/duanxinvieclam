@@ -5,9 +5,7 @@
 <!-- Slide Show -->
 <section id="bannerhp">
     <img class="mySlides img img-responsive" ng-src="../../../images/todo/AngularJS_Banner.jpg" style="width:100%">
-    <img class="mySlides img img-responsive" ng-src="../../../images/todo/Express-JS-Banner.png" style="width:100%">
-    <img class="mySlides img img-responsive" ng-src="../../../images/todo/bootstrap_banner.png" style="width:100%">
-    <img class="mySlides img img-responsive" ng-src="../../../images/todo/nodejs_banner.png" style="width:100%">
+     
 </section>
 <section class="w3-container w3-center" style="max-width:600px">
     <h2 class="w3-wide">Lời giới thiệu</h2>
@@ -125,22 +123,3 @@
         <!-- <source src="movie.ogg" type="video/ogg"> Your browser does not support the video tag. -->
     </video>
 </section>
-
-<script>
-    // Automatic Slideshow - change image every 3 seconds
-    var myIndex = 0;
-    carousel();
-
-    function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) { myIndex = 1 }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 3000);
-    }
-
-</script>

@@ -9,8 +9,10 @@
   "author": "sok kim thanh",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "lazy-load": "0.0.2",
+    "mysql": "^2.14.1",
     "path": "^0.12.7",
     "pug": "^2.0.0-rc.3"
   },

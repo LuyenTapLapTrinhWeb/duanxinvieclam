@@ -25,7 +25,6 @@ angular.module('todoApp', ['ui.bootstrap'])
         if (!todo.done) todoList.todos.push(todo);
       });
     };
-
   })
   .directive("slideDirective", function () {
     return {
@@ -33,8 +32,8 @@ angular.module('todoApp', ['ui.bootstrap'])
       templateUrl: "../../app/templates/todos/slide-directive.html",
       controller: function ($scope, $http) {
         $scope.myInterval = 5000;
-        
-       $scope.slides = [];
+
+        $scope.slides = [];
         $http({ method: "GET", url: "../json/todo.json" }).then(function (success) {
           $scope.slides = success.data;
         });
@@ -42,3 +41,16 @@ angular.module('todoApp', ['ui.bootstrap'])
       controllerAs: "slideCtrl"
     };
   })
+  .directive('reminderApp', function () {
+    return {
+      restrict: "E",
+      templateUrl: "../../app/templates/todos/reminder-app.html",
+      controller: function ($scope, $http) {
+        // select all
+        $http({ method: "GET", url: "http://localhost:3000/todo/" }).then(function success(success) {
+          $scope.reminders = success.data;
+        })
+      },
+      controllerAs: "reminderCtrl"
+    };
+  }) 

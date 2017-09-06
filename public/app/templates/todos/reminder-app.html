@@ -1,0 +1,62 @@
+<!-- {{reminders}} -->
+<section>
+    <nav class="controller">
+        <div class="row">
+            <div class="col-xs-4 col-md-4">
+                <!-- icon config-->
+                <div class="pull-left">
+                    <!-- <button class="btn btn-default"> <i class="fa fa-cog   "></i>
+                <span class="sr-only">Loading...</span>
+              </button> -->
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <!-- nameapp -->
+                <div class="text-center">
+                    <h1 class="text-capitalize">todo</h1>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <!-- icon bell -->
+
+                <div class="pull-right">
+                    <!-- <button class="btn btn-info">
+                    <i class="fa fa-bell  "></i>
+                </button> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
+<!-- {{rd}} -->
+<!-- list todo -->
+<section>
+    <table class="table table-responsive customview ">
+        <tbody>
+            <tr ng-repeat="rd in reminders | orderBy:'-reng'">
+                <td >
+                    <div class="hoveritem">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 col-lg-6">
+                                <div class="pull-left">
+
+                                    <h3> {{rd.title}} <small>{{rd.reng|date:"dd MMM yy"}}</small></h3>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-6">
+                                <div class="pull-right">
+                                    <button class="btn btn-default"><i class="fa fa-eye"></i></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<!-- calendar -->
+<section>
+    <calendar-directive></calendar-directive>
+</section>
