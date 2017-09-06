@@ -45,6 +45,7 @@
 }
 .hoveritem:hover{
   border-left: 10px solid purple;
+  
 }
 .calendar{
   margin: 20px;
