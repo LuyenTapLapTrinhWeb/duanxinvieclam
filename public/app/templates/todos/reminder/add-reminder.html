@@ -1,0 +1,32 @@
+<!--     
+    {{rm.title}}  {{rm.reng}}   {{rm.done}}  {{rm.unactive}}
+    {{rm}} -->
+<form action="/#!/todo" method="POST" name="frmAddReminder" class="form-horizontal component" role="form" novalidate ng-submit="addReminder(reminder)">
+    <legend class="text-capitalize">addnew</legend>
+    <div class="form-group">
+        <label for="title" class="control-label col-xs-12 col-md-2"> Title </label>
+        <div class="col-xs-12 col-md-10">
+            <input name="title" type="text" class="form-control" placeholder="Phỏng vấn tại.." ng-model="reminder.title" require>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="title" class="control-label col-xs-12 col-md-2"> Datetime </label>
+        <div class="col-xs-12 col-md-10">
+            <input name="reng" type="datetime-local" class="form-control" ng-model="reminder.reng" require>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <button class="btn btn-primary" type="submit"><i class="fa fa-plus-circle"></i></button>
+        </div>
+    </div>
+</form>
+
+<!-- {{title}} -->
+<!-- <p ng-if="controller.errors"> {{controller.errors}} </p> -->
+<!-- <form action="/todo/new" method="post">
+    <label for="team_name">Enter name: </label>
+    <input id="team_name" type="text" name="name_field" value="Default name for team."  >
+    <input type="submit" value="OK"  >
+</form> -->

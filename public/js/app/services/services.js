@@ -24,16 +24,15 @@ angular.module("gemStore").config(function ($routeProvider) {
             controller: "productPhotoController",
             controllerAs: "ppCtrl"
         })
-        .when("/photos/album/new",{
-            templateUrl: "../app/store/photo/new.html",
-            controller: "a",
-            controllerAs: "s"
-        })
+
         .when('/weathers', {
             templateUrl: "../app/store/weather/index.html"
         })
         .when("/todo", {
             templateUrl: "../app/store/todos/index.html"
+        })
+        .when("/todo/edit", {
+            templateUrl: "../app/templates/todos/reminder/edit-reminder.html"
         })
         .when("/404", {
             templateUrl: "../app/store/404/index.html"

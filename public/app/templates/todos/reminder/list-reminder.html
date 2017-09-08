@@ -1,0 +1,25 @@
+<table class="table table-responsive customview ">
+    <tbody>
+
+        <tr ng-repeat="rd in reminders | orderBy:'-reng'">
+            <td>
+                <div class="hoveritem">
+                    <div class="row" ng-show="rd.done == 0 && rd.unactive = 0">
+                        <div class="col-xs-12 col-md-6 col-lg-6">
+                            <div class="pull-left">
+                                <h3> {{rd.title}} <br> <small>{{rd.reng|date:"dd MMM yy"}}</small></h3>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-lg-6">
+                            <div class="pull-right">
+                                <div style="margin-top: 20px">
+                                    <button class="btn btn-default"><i class="fa fa-edit"><a href="/#!/todo/edit">edit</a></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

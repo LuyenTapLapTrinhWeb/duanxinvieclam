@@ -1,0 +1,26 @@
+<div class="col-xs-12 col-md-6">
+    <h2>
+        Todo</h2>
+    <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span> [ <a href="" ng-click="todoList.archive()">archive</a>]
+    <ul class="unstyled">
+        <li ng-repeat="todo in todoList.todos">
+            <label class="checkbox">
+            <input type="checkbox" ng-model="todo.done">
+            <span class="done-{{todo.done}}">{{todo.text}}</span>
+          </label>
+        </li>
+    </ul>
+    <form ng-submit="todoList.addTodo()">
+        <input type="text" ng-model="todoList.todoText" size="30" placeholder="add new todo here">
+        <input class="btn btn-primary" type="submit" value="add">
+    </form>
+</div>
+<div class="col-xs-12 col-md-6">
+    <div class="text-uppercase">
+        <h2>basic</h2>
+        <label>Name:</label>
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h1>Hello {{yourName}}!</h1>
+    </div>
+</div>

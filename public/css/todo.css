@@ -9,7 +9,7 @@
 
 #slides_control img#banner {
   margin: auto;
-   min-height: 100px;
+  min-height: 100px;
   max-height: 390px;
   height: auto;
   width: 100%;
@@ -19,8 +19,9 @@
   /* position: relative; */
   /* width: 800px; */
   /* height: 300px; */
-    top: 20px;
+  top: 20px;
 }
+
 .component {
   border: 1px solid purple;
   border-radius: 5px;
@@ -30,6 +31,7 @@
   font-size: 16px;
   padding: 10px;
 }
+
 .controller {
   border-bottom: 1px solid purple;
   /* border-radius: 5px; */
@@ -39,14 +41,36 @@
   /* font-size: 12px; */
   padding: 10px;
 }
-.customview{
+
+.customview {
   /* width: 50%; */
   height: 200px;
 }
-.hoveritem:hover{
+
+.hoveritem:hover {
   border-left: 10px solid purple;
-  
 }
-.calendar{
+
+.calendar {
   margin: 20px;
+}
+
+.moon {
+  background-color: #C2E1FE;
+  box-shadow: 0 2px 50px #800080;
+  height: auto;
+  width: auto;
+  border-radius: 50%;
+  position: relative;
+  /* right: 20px; */
+  line-height: auto;
+  text-align: center;
+  color: purple;
+  /* font-size: 18px; */
+  font-weight: 200;
+  /* padding: 50px; */
+}
+
+.moon>a:hover {
+  text-decoration: none;
 }

@@ -46,6 +46,7 @@ angular.module('todoApp', ['ui.bootstrap'])
       restrict: "E",
       templateUrl: "../../app/templates/todos/reminder-app.html",
       controller: function ($scope, $http) {
+        $scope.datenow = Date.now();
         // select all
         $http({ method: "GET", url: "http://localhost:3000/todo/" }).then(function success(success) {
           $scope.reminders = success.data;
@@ -53,4 +54,41 @@ angular.module('todoApp', ['ui.bootstrap'])
       },
       controllerAs: "reminderCtrl"
     };
-  }) 
+  })
+  .directive('menuReminder', function () {
+    return {
+      restrict: "E",
+      templateUrl: "../../app/templates/todos/reminder/menu-reminder.html"
+    }
+  })
+
+  .directive('listReminder', function () {
+    return {
+      restrict: "E",
+      templateUrl: "../../app/templates/todos/reminder/list-reminder.html",
+      controller: function ($scope) {
+        $scope.unactive = 0;
+        $scope.done = 0;
+        $scope.setUnactive = function (newvalue) {
+          $scope.unactive = newvalue;
+        }
+        $scope.setDone = function (newvalue) {
+          $scope.done = newvalue;
+        }
+      }
+    }
+  })
+
+  .directive('addReminder', function () {
+    return {
+      restrict: "E",
+      templateUrl: "../../app/templates/todos/reminder/add-reminder.html",
+      controller: function ($scope) {
+        $scope.reminders = [];
+        // alert("vao day");
+        $scope.addReminder = function (reminder) {
+          $scope.reminders.push(reminder);
+        }
+      }
+    }
+  })
